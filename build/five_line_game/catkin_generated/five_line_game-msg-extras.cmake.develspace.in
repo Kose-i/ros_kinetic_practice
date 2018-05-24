@@ -1,0 +1,2 @@
+set(five_line_game_MESSAGE_FILES "/home/tamura-kosei/works/rosprac/src/five_line_game/msg/board.msg")
+set(five_line_game_SERVICE_FILES "")

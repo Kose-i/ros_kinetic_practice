@@ -1,0 +1,8 @@
+prefix=/home/tamura-kosei/works/rosprac/install
+
+Name: learning_tf2
+Description: Description of learning_tf2
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/tamura-kosei/works/rosprac/install/lib 
+Requires: 

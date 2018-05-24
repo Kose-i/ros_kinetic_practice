@@ -1,0 +1,8 @@
+prefix=/home/tamura-kosei/works/rosprac/install
+
+Name: five_line_game
+Description: Description of five_line_game
+Version: 0.0.0
+Cflags: -I/home/tamura-kosei/works/rosprac/install/include
+Libs: -L/home/tamura-kosei/works/rosprac/install/lib 
+Requires: 
