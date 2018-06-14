@@ -1,0 +1,5 @@
+<launch>
+  <node pkg="ros_command" type="ros_command_node" name="test" output="screen">
+    <param name="/paramset" value="2"/>
+  </node>
+</launch>
