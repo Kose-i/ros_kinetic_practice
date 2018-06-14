@@ -1,7 +1,0 @@
-<launch>
-  
-  <include file="$(find turtle_teleop)/launch/turtle_keyboard.launch"/>
-  <node pkg="learning_tf" type="learning_tf_node" args="/turtle1" name="turtle1_tf_broadcaster"/>
-  <node pkg="learning_tf" type="learning_tf_node" args="/turtle2" name="turtle2_tf_broadcaster"/>
-
-</launch>

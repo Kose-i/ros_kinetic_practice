@@ -1,3 +1,0 @@
-<launch>
-  <node pkg="learning_tf2" type="static_turtle_tf2_broadcaster" name="link1_broadcaster" args="1 0 0 0 0 0 1 "/>
-</launch>

@@ -1,8 +1,0 @@
-prefix=/home/tamura-kosei/works/rosprac/install
-
-Name: arduino_tutorial
-Description: Description of arduino_tutorial
-Version: 0.0.0
-Cflags: 
-Libs: -L/home/tamura-kosei/works/rosprac/install/lib 
-Requires: 

@@ -1,4 +1,0 @@
-<launch>
-  <node pkg="comp_tutorial" type="adder_node" name="adder" output="screen"/>
-  <node pkg="comp_tutorial" type="para_in_node" name="para_in" output="screen"/>
-</launch>
