@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<robot name="one_arm">
+
+  <!--base link-->
+  <link name="base">
+    <visual>
+      <geometry>
+        <box size="0.02 0.02 0.1"/>
+      </geometry>
+      <origin rpy="0 0 0" xyz="0 0 0.05"/>
+      <material name="gray">
+        <color rgba="0.8 0.8 0.8 0.5"/>
+      </material>
+    </visual>
+  </link>
+  
+  <!--first_arm_link-->
+  <link name="first_arm">
+    <visual>
+      <geometry>
+        <box size="0.02 0.02 0.11"/>
+      </geometry>
+      <origin rpy="0 0 0" xyz="0 0 0.045"/>
+      <material name="gray"/>
+    </visual>
+  </link>
+
+  <!--base to first_arm joint-->
+  <joint name="base_to_first" type="revolute">
+    <parent link="base"/>
+    <child link="first_arm"/>
+    <axis xyz="0 1 0"/>
+    <origin xyz="0 0.02 0.095"/>
+    <limit effort="1000" lower="-2.0" upper="2.0" velocity="0.5"/>
+  </joint>
+
+  <!--collision-->
+  <collision>
+    <geometry>
+      <box size="0.02 0.20 0.1"/>
+    </geometry>
+  </collision>
+
+  <!--inertial-->
+  <inertial>
+    <mass value="0.1"/>
+    <inertial ixx="1.0" ixy="0.0" ixz="0.2" iyy="1.0" iyz="0.0" izz="0.0"/>
+  </inertial>
+
+</robot>
