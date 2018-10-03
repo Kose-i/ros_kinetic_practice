@@ -8,11 +8,9 @@ find_package(catkin REQUIRED
   roscpp
   tf
   turtlesim
-  rospy
 )
 
-catkin_package(
-)
+catkin_package()
 
 include_directories(
  ${catkin_INCLUDE_DIRS}
@@ -21,6 +19,7 @@ include_directories(
 add_executable(turtle_tf_broadcaster src/turtle_tf_broadcaster.cpp)
 add_executable(turtle_tf_listener src/turtle_tf_listener.cpp)
 add_executable(turtle_frame_broadcaster src/frame_tf_broadcaster.cpp)
+add_executable(carrot_tf_listener src/carrot_tf_listener.cpp)
 
 target_link_libraries(
 turtle_tf_broadcaster
@@ -29,6 +28,10 @@ turtle_tf_broadcaster
 target_link_libraries(
    turtle_tf_listener
    ${catkin_LIBRARIES}
+)
+target_link_libraries(
+    carrot_tf_listener
+    ${catkin_LIBRARIES}
 )
 target_link_libraries(
    turtle_frame_broadcaster
