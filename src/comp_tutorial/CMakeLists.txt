@@ -19,8 +19,6 @@ generate_messages(
    std_msgs
 )
 
-#catkin_package(CATKIN_DEPENDS roscpp std_msgs)
-
 include_directories(
   ${catkin_INCLUDE_DIRS}
 )
