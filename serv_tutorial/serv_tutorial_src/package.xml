@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <package format="2">
-  <name>serv_tutorial</name>
+  <name>serv_tutorial_src</name>
   <version>0.0.0</version>
   <description>The serv_tutorial package</description>
 
@@ -8,12 +8,15 @@
 
   <license>TODO</license>
 
+  <buildtool_depend>catkin</buildtool_depend>
+
   <depend>roscpp</depend>
   <depend>std_msgs</depend>
+  <depend>serv_tutorial_srv</depend>
   <build_depend>message_generation</build_depend>
+  <build_export_depend>message_generation</build_export_depend>
 
-  <depend>message_runtime</depend>
-  <buildtool_depend>catkin</buildtool_depend>
+  <exec_depend>message_runtime</exec_depend>
 
   <export></export>
 

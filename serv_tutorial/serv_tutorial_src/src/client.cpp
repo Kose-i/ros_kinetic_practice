@@ -1,5 +1,5 @@
 #include "ros/ros.h"
-#include "serv_tutorial/Add_three_int.h"
+#include "serv_tutorial_srv/Add_three_int.h"
 
 #include <cstdlib>
 
@@ -13,8 +13,8 @@ int main(int argc, char** argv)
   }
 
   ros::NodeHandle n;
-  ros::ServiceClient client = n.serviceClient<serv_tutorial::Add_three_int>("Add_three_ints");
-  serv_tutorial::Add_three_int serv;
+  ros::ServiceClient client = n.serviceClient<serv_tutorial_srv::Add_three_int>("Add_three_ints");
+  serv_tutorial_srv::Add_three_int serv;
   serv.request.A = atoll(argv[1]);
   serv.request.B = atoll(argv[2]);
   serv.request.C = atoll(argv[3]);

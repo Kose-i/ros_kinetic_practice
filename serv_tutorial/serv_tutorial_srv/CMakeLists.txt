@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 2.8.3)
-project(serv_tutorial)
+project(serv_tutorial_srv)
 
 add_compile_options(-std=c++11)
 
@@ -27,9 +27,3 @@ catkin_package(
 include_directories(
   ${catkin_INCLUDE_DIRS}
 )
-
-add_executable(serve_node src/serv.cpp)
-target_link_libraries(serve_node ${catkin_LIBRARIES})
-
-add_executable(client_node src/client.cpp)
-target_link_libraries(client_node ${catkin_LIBRARIES})

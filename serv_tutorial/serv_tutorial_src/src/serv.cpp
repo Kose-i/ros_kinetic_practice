@@ -1,7 +1,7 @@
 #include "ros/ros.h"
-#include "serv_tutorial/Add_three_int.h"
+#include "serv_tutorial_srv/Add_three_int.h"
 
-bool add(serv_tutorial::Add_three_int::Request& req, serv_tutorial::Add_three_int::Response& res)
+bool add(serv_tutorial_srv::Add_three_int::Request& req, serv_tutorial_srv::Add_three_int::Response& res)
 {
   res.Sum = req.A + req.B + req.C;
   ROS_INFO("request: x = %ld, y = %ld , z = %ld",(long int)req.A, (long int)req.B, (long int)req.C);
