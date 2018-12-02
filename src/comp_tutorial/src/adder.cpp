@@ -1,7 +1,8 @@
-#include "ros/ros.h"
 #include "comp_tutorial/adder.h"
 
-void chatterCallback(const comp_tutorial::adder msg)
+#include <ros/ros.h>
+
+void chatterCallback(const comp_tutorial::adder& msg)
 {
   unsigned int result = msg.a + msg.b;
   ROS_INFO("a:%d + b:%d = %d\n",msg.a , msg.b , result);
