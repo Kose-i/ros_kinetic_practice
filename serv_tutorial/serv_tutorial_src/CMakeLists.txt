@@ -20,7 +20,9 @@ include_directories(
 )
 
 add_executable(serve_node src/serv.cpp)
+add_dependencies(serve_node ${catkin_EXPORTED_TARGETS})
 target_link_libraries(serve_node ${catkin_LIBRARIES})
 
 add_executable(client_node src/client.cpp)
+add_dependencies(client_node ${catkin_EXPORTED_TARGETS})
 target_link_libraries(client_node ${catkin_LIBRARIES})
