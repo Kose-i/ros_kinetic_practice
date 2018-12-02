@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>comp_tutorial_src</name>
+  <version>0.0.0</version>
+  <description>The comp_tutorial package</description>
+
+  <maintainer email="tamura-kosei@todo.todo">tamura-kosei</maintainer>
+
+  <license>TODO</license>
+
+  <depend>roscpp</depend>
+  <depend>std_msgs</depend>
+  <depend>comp_tutorial_msg</depend>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <export></export>
+
+</package>
