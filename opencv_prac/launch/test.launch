@@ -1,0 +1,3 @@
+<launch>
+  <node name="opencv_prac" pkg="opencv_prac" type="opencv_prac_node"/>
+</launch>
