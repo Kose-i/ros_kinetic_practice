@@ -21,4 +21,4 @@ add_executable(${PROJECT_NAME}_node src/main.cpp)
 
 target_link_libraries(${PROJECT_NAME}_node
    ${catkin_LIBRARIES}
- )
+)

@@ -1,9 +1,9 @@
 #include <opencv2/opencv.hpp>
-#include "opencv2/highgui.hpp"
-#include "opencv2/imgproc.hpp"
+#include <opencv2/highgui.hpp>
+#include <opencv2/imgproc.hpp>
 using namespace std;
 using namespace cv;
-//#if 0
+
 void on_low_h_threshold(int,void*);
 void on_high_h_threshold(int,void*);
 void on_low_s_threshold(int,void*);
