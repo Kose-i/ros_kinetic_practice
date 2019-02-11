@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 2.8.3)
-project(action_make)
+project(action_header)
 
 find_package(catkin REQUIRED COMPONENTS
   std_msgs
@@ -11,7 +11,7 @@ add_action_files(
   DIRECTORY
   action
   FILES
-  Action1.action
+  Fibonnachi.action
 )
 
 generate_messages(

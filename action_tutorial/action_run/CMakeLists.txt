@@ -5,6 +5,7 @@ find_package(catkin REQUIRED COMPONENTS
   std_msgs
   roscpp
   actionlib
+  action_header
 )
 
 catkin_package(
@@ -12,7 +13,6 @@ catkin_package(
 )
 
 include_directories(
-  include
   ${catkin_INCLUDE_DIRS}
 )
 
@@ -22,8 +22,8 @@ target_link_libraries(${PROJECT_NAME}_client
   ${catkin_LIBRARIES}
 )
 
-add_executable(${PROJECT_NAME}_server src/action_server.cpp)
-add_dependencies(${PROJECT_NAME}_server ${catkin_EXPORTED_TARGETS})
-target_link_libraries(${PROJECT_NAME}_server
-  ${catkin_LIBRARIES}
-)
+#add_executable(${PROJECT_NAME}_server src/action_server.cpp)
+#add_dependencies(${PROJECT_NAME}_server ${catkin_EXPORTED_TARGETS})
+#target_link_libraries(${PROJECT_NAME}_server
+#  ${catkin_LIBRARIES}
+#)
