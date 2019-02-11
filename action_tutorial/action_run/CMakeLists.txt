@@ -20,6 +20,7 @@ add_executable(${PROJECT_NAME}_client src/action_client.cpp)
 add_dependencies(${PROJECT_NAME}_client ${catkin_EXPORTED_TARGETS})
 target_link_libraries(${PROJECT_NAME}_client
   ${catkin_LIBRARIES}
+  ${Boost_LIBRARIES}
 )
 
 #add_executable(${PROJECT_NAME}_server src/action_server.cpp)

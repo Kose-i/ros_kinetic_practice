@@ -9,18 +9,17 @@ class TutorialActionClient{
     TutorialActionClient(const std::string&);
     ~TutorialActionClient();
 
-    void finishedCb(const actionlib::SimpleClientGoalState& state, const action_header::FibonnachiActionResultConstPtr& result);
+    void doneCb(const actionlib::SimpleClientGoalState&, const action_header::FibonnachiActionResultConstPtr&);
     void activeCb();
-    void feedbackCb(const action_header::FibonnachiFeedbackConstPtr& feedback);
+    void feedbackCb(const action_header::FibonnachiFeedbackConstPtr&);
 
     void send_Fibonnachi();
 
   private:
     void make_Fibonnachi();
     actionlib::SimpleActionClient<action_header::FibonnachiAction> ac;
-    std::vector<unsigned> fibonnachi;
     std::string action_name;
-    action_header::FibonnachiGoal goal;
+    action_header::FibonnachiGoal fibonnachi;
 };
 
 int main(int argc, char** argv) {
@@ -41,9 +40,9 @@ TutorialActionClient::TutorialActionClient(const std::string& name) : ac("action
   send_Fibonnachi();
 }
 TutorialActionClient::~TutorialActionClient() {}
-void TutorialActionClient::finishedCb(const actionlib::SimpleClientGoalState& state, const action_header::FibonnachiActionResultConstPtr& result) {
+void TutorialActionClient::doneCb(const actionlib::SimpleClientGoalState& state, const action_header::FibonnachiActionResultConstPtr& result) {
   ROS_INFO("Finished in state [%s]", state.toString().c_str());
-  //ROS_INFO("Result: %d",result->result);
+  ROS_INFO("Result: %d",result->result);
   ros::shutdown();
 }
 void TutorialActionClient::activeCb() {
@@ -54,16 +53,16 @@ void TutorialActionClient::feedbackCb(const action_header::FibonnachiFeedbackCon
 }
 void TutorialActionClient::send_Fibonnachi() {
   ac.sendGoal(
-    goal,
-    boost::bind(&TutorialActionClient::finishedCb, this, _1, _2),
+    fibonnachi,
+    boost::bind(&TutorialActionClient::doneCb, this, _1, _2),
     boost::bind(&TutorialActionClient::activeCb, this),
     boost::bind(&TutorialActionClient::feedbackCb, this, _1)
   );
 }
 void TutorialActionClient::make_Fibonnachi() {
-  fibonnachi.push_back(1);
-  fibonnachi.push_back(1);
+  fibonnachi.waypoint.push_back(1);
+  fibonnachi.waypoint.push_back(1);
   for (auto i = 2;i <= 100;++i) {
-    fibonnachi.push_back(fibonnachi[i - 2] + fibonnachi[i - 1]);
+    fibonnachi.waypoint.push_back(fibonnachi.waypoint[i - 2] + fibonnachi.waypoint[i - 1]);
   }
 }
