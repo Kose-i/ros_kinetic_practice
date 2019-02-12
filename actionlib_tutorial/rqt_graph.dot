@@ -1,0 +1,51 @@
+digraph graphname {
+	graph [bb="0,0,299.79,102",
+		compound=True,
+		rank=same,
+		rankdir=LR,
+		ranksep=0.2
+	];
+	node [label="\N"];
+	subgraph cluster_fibonacci {
+		graph [bb="8,19,167,94",
+			compound=True,
+			label=fibonacci,
+			lheight=0.21,
+			lp="87.5,82.5",
+			lwidth=0.71,
+			rank=same,
+			rankdir=LR,
+			ranksep=0.2,
+			style=bold
+		];
+		n___fibonacci__action_topics		 [URL=topic_3Afibonacci__action_topics,
+			height=0.5,
+			label="fibonacci/action_topics",
+			pos="87.5,45",
+			shape=box,
+			tooltip="topic:fibonacci/action_topics",
+			width=1.9861];
+	}
+	n___fibonacci	 [URL=__fibonacci,
+		height=0.5,
+		label="/fibonacci",
+		pos="237.39,72",
+		shape=ellipse,
+		tooltip="/fibonacci",
+		width=1.2818];
+	n___fibonacci__action_topics -> n___fibonacci	 [penwidth=1,
+		pos="e,202.76,60.094 159.41,51.201 170.88,53.256 182.43,55.544 192.98,57.865"];
+	n___test_fibonacci	 [URL=__test_fibonacci,
+		height=0.5,
+		label="/test_fibonacci",
+		pos="237.39,18",
+		shape=ellipse,
+		tooltip="/test_fibonacci",
+		width=1.7332];
+	n___fibonacci__action_topics -> n___test_fibonacci	 [penwidth=1,
+		pos="e,176.54,22.288 150.79,26.953 155.99,25.937 161.26,24.952 166.51,24.018"];
+	n___fibonacci -> n___fibonacci__action_topics	 [penwidth=1,
+		pos="e,150.79,63.047 191.25,70.03 181.58,68.602 171.13,66.853 160.72,64.934"];
+	n___test_fibonacci -> n___fibonacci__action_topics	 [penwidth=1,
+		pos="e,159.41,38.799 195.71,31.53 187.43,33.386 178.45,35.232 169.34,36.966"];
+}
