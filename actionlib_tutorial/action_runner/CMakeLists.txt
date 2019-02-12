@@ -3,12 +3,17 @@ project(action_runner)
 
 find_package(catkin REQUIRED COMPONENTS
   actionlib
-  actionlib_msgs
-  message_generation
+#  actionlib_msgs
+#  message_generation
   roscpp
-  std_msgs
+#  std_msgs
 
   action_header
+)
+
+catkin_package(
+  CATKIN_DEPENDS
+    action_header
 )
 
 include_directories(
