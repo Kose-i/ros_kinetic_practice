@@ -5,8 +5,7 @@ find_package(catkin REQUIRED COMPONENTS
   roscpp
 )
 
-catkin_package(
-)
+catkin_package()
 
 include_directories(
   ${catkin_INCLUDE_DIRS}
