@@ -1,8 +1,0 @@
-#target
-int32[] waypoint
----
-#finish
-int32 result
----
-#feedback
-int32 progress
