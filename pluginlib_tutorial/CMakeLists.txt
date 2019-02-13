@@ -14,8 +14,7 @@ include_directories(
 )
 add_library(polygon_plugin src/polygon_plugin.cpp)
 
-# add_executable(${PROJECT_NAME}_node src/pluginlib_tutorial_node.cpp)
-# add_dependencies(${PROJECT_NAME}_node ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
-# target_link_libraries(${PROJECT_NAME}_node
-#   ${catkin_LIBRARIES}
-# )
+add_executable(polygon_loader src/polygon_loader.cpp)
+target_link_libraries(polygon_loader
+  ${catkin_LIBRARIES}
+)
